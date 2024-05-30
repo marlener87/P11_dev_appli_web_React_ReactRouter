@@ -1,0 +1,33 @@
+.cardsContainer {
+    padding: 30px 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #f6f6f6;
+    border-radius: 20px;
+    margin: 40px 0;
+
+    .cardLogement {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+        position: relative;
+
+        img {
+            height: 250px;
+            width: 250px;
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+        }
+
+        .titreLogement {
+            position: absolute;
+            top: 180px;
+            left: 10px;
+            width: 180px;
+            color: white;
+            font-weight: 900;
+        }
+    }
+}

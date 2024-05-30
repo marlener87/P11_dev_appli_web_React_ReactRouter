@@ -1,0 +1,26 @@
+.erreur {
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1, h2 {
+        color: $color1;
+    }
+
+    h1 {
+        font-size: 290px;
+        margin-bottom: 90px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .lienError {
+        font-size: 18px;
+        color: black;
+        margin: 70px 0;
+    }
+}
