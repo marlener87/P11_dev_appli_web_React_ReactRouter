@@ -8,16 +8,17 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Logements from './pages/Logements/Logements';
 import About from './pages/About/About';
-import Header from './components/Header/Header';
+import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Error from './pages/Error/Error'
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <Header />
+            <Navbar />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/logements/:id' element={<Logements />} />

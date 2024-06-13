@@ -1,27 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-const Carrousel = (images) => {
-    const [ logementsDatas, setLogementsDatas ] = useState(null);
 
-    useEffect(() => {
-        fetch('/data/location.json')
-            .then(res => {
-                if(!res.ok) {
-                    throw new Error('faux');
-                }
-                return res.json();
-            })
-            .then(logementsDatas => {
-                console.log(logementsDatas.locationData);
-                setLogementsDatas(logementsDatas.locationData)})
-            .catch(error => {
-                console.error("dommage", error);
-            });
-    }, []);
-
+const Carrousel = ({ images }) => {
     /* initialisation du hook d'état associé à l'index dans la table pictures */
 	let [id, setId] = useState(0);
+
+    if (!images || images.length === 0) {
+        return <p>Aucune image disponible</p>;
+    }
 
 	/* S'il n'y a qu'une seule image, on masque les flèches de navigation */
 	let classStringPrevious = "previous";
@@ -40,31 +26,28 @@ const Carrousel = (images) => {
 	}
     return (
         <section className="carrousel-container">
-            <button className={classStringPrevious} onClick={previous} alt="précédente">&#60;</button>
+            <button className={classStringPrevious} onClick={previous} aria-label="précédente">&#60;</button>
 			
-              {logementsDatas.map(logement => {
-                console.log(logement);
-                return (
-                    <Link key={logement.id} className="cardLogement" to={`/logements/${logement.id}`}>
-                    {logement.pictures.length > 0 && (
-                        <img src={logement.pictures[0]} alt={logement.title} key={logement.id} />
-                    )}
-                </Link>
-                )
-            }
-            )}
+            <img src={images[id]} alt={`photo ${id + 1}`} className='imageAppart' />
 
-			<p>
+			<p className='numPages'>
 				{id + 1}/{images.length}
 			</p>
 
-          
-            <button className={classStringNext} onClick={next} alt="suivante">&#62;</button>
+            <button className={classStringNext} onClick={next} aria-label="suivante">&#62;</button>
 		</section>
     );
 };
 
 /* 
+{images && images.map(image => (
+                    <img src={image} alt={image} key={image} className='imageAppart' />
+                )
+            )}
+
+
+
+
 <img src={previousIcon} className={classStringPrevious} onClick={previous} alt="précédente" />
 <img src={nextIcon} className={classStringNext} onClick={next} alt="suivante" />
 
@@ -75,5 +58,18 @@ const Carrousel = (images) => {
             <button className="chevron chevronG" aria-label="précédent">&lt;</button>
             <button className="chevron chevronD" aria-label="suivant">&gt;</button>
         </section>
-*/
+
+
+
+
+console.log(image);
+
+/*return (
+                    <Link key={image} className="cardLogement" to={`/logements/${logement.id}`}>
+                    {logement.pictures.length > 0 && (
+                        <img src={logement.pictures[0]} alt={logement.title} key={logement.id} />
+                    )}
+                </Link>
+                )*/
+
 export default Carrousel;

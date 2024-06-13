@@ -1,15 +1,16 @@
 import React from 'react';
 import Collaspe from '../../components/Collapse/Collaspe';
+import Header from '../../components/Header/Header';
+import imageHeader from '../../assets/img/apropos.jpg';
 
 const About = () => {
     
 
     return (
-        <div className="about">
-            <div className='bannerAbout'></div>
-
+        <main className="about">
+            <Header imageHeader={imageHeader} className='bannerAbout' />
             <Collaspe />
-        </div>
+        </main>
     );
 };
 

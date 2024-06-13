@@ -1,8 +1,8 @@
 .about {
-    margin: 0 50px;
+    margin: 0 100px;
+    position: relative; 
 
     .bannerAbout {
-        background: url(../assets/img/about.jpg) center/cover;
         height: 200px;
         border-radius: 20px;
     }

@@ -1,13 +1,11 @@
 import Card from '../../components/Card/Card';
+import Header from '../../components/Header/Header';
+import imageHeader from '../../assets/img/accueil.jpg'; // Importation de l'image     image.png
 
-const Home = ( ) => {
+const Home = () => {
     return (
         <main>
-            <div className="banner">
-                <div className="bgDark"></div>
-                <h1>Chez vous, partout et ailleurs</h1>
-            </div>
-
+            <Header imageHeader={imageHeader} titreHeader='Chez vous, partout et ailleurs'/>
             <Card />
         </main>
     );

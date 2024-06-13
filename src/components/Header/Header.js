@@ -1,20 +1,11 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import logo from "../../assets/img/logo.jpg";
 
-const Header = () => {
+const Header = ({ imageHeader, titreHeader }) => {
     return (
-        <header>
-            <Link to="/">
-                <img className="logo" src={logo} alt="logo du site Kasa" />
-            </Link>
-
-            <nav>
-                <NavLink className="headerLink" to="/error">Erreur</NavLink>
-                <NavLink className="headerLink" to="/">Accueil</NavLink>
-                <NavLink className="headerLink" to="/about">A Propos</NavLink>
-            </nav>
-        </header>
+        <div className="banner">
+            <img src={imageHeader} alt="" className="bgDark" />
+            <h1>{titreHeader}</h1>
+        </div>
     );
 };
 
