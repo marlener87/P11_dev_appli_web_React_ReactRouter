@@ -93,17 +93,17 @@ footer p {
   margin-top: 30px;
 }
 
-section {
+.carrousel-container {
   height: 415px;
   margin: 0 100px;
   position: relative;
 }
-section .imageAppart {
+.carrousel-container .imageAppart {
   border-radius: 20px;
   height: 415px;
   width: 100%;
 }
-section .previous, section .next {
+.carrousel-container .previous, .carrousel-container .next {
   position: absolute;
   height: 50px;
   width: 50px;
@@ -124,13 +124,13 @@ section .previous, section .next {
   top: 45%;
   cursor: pointer;
 }
-section .previous {
+.carrousel-container .previous {
   left: 20px;
 }
-section .next {
+.carrousel-container .next {
   right: 20px;
 }
-section .numPages {
+.carrousel-container .numPages {
   color: white;
   position: absolute;
   left: 50%;
@@ -166,6 +166,15 @@ section .numPages {
   border-radius: 20px;
 }
 
+.about {
+  margin: 0 100px;
+  position: relative;
+}
+.about .bannerAbout {
+  height: 200px;
+  border-radius: 20px;
+}
+
 .descriptionLogement {
   padding-top: 40px;
   display: -webkit-box;
@@ -174,12 +183,29 @@ section .numPages {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 100px;
 }
 .descriptionLogement .left .locationBlock .logementTitle {
   color: #fc6468;
   font-size: 36px;
   font-weight: 500;
   padding-bottom: 10px;
+}
+.descriptionLogement .left .tagsBlock ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+.descriptionLogement .left .tagsBlock ul li {
+  list-style: none;
+  background: #fc6468;
+  color: white;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  min-width: 115px;
 }
 .descriptionLogement .right .ownerBlock {
   display: -webkit-box;
@@ -209,15 +235,7 @@ section .numPages {
   color: #fc6468;
 }
 
-.about {
-  margin: 0 100px;
-  position: relative;
-}
-.about .bannerAbout {
-  height: 200px;
-  border-radius: 20px;
-}
-.about .dropdownAboutContainer {
+.dropdownAboutContainer {
   margin: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -233,14 +251,15 @@ section .numPages {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.about .dropdownAboutContainer .dropdownAbout {
+.dropdownAboutContainer .dropdownAbout {
   width: 85%;
   margin-bottom: 30px;
+  position: relative;
 }
-.about .dropdownAboutContainer .dropdownAbout .dropdownTitle {
+.dropdownAboutContainer .dropdownAbout .dropdownTitle {
   background: #fc6468;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px 20px;
   color: white;
   font-size: 24px;
@@ -257,30 +276,35 @@ section .numPages {
   border: none;
   cursor: pointer;
 }
-.about .dropdownAboutContainer .dropdownAbout .dropdownTitle .dropdownButton {
+.dropdownAboutContainer .dropdownAbout .dropdownTitle .dropdownButton {
   background: #fc6468;
   color: white;
   font-size: 24px;
   font-weight: 700;
 }
-.about .dropdownAboutContainer .dropdownAbout .dropdownTitle .fa-chevron-down {
+.dropdownAboutContainer .dropdownAbout .dropdownTitle .fa-chevron-down {
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.about .dropdownAboutContainer .dropdownAbout .dropdownTitle .fa-chevron-down-rotate {
+.dropdownAboutContainer .dropdownAbout .dropdownTitle .fa-chevron-down-rotate {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.about .dropdownAboutContainer .dropdownAbout .dropdownContent {
+.dropdownAboutContainer .dropdownAbout .dropdownContent {
   padding: 20px;
   display: none;
+  background: #f6f6f6;
+  border-radius: 0 0 10px 10px;
 }
-.about .dropdownAboutContainer .dropdownAbout .menu-open {
+.dropdownAboutContainer .dropdownAbout .dropdownContent ul li {
+  list-style: none;
+}
+.dropdownAboutContainer .dropdownAbout .menu-open {
   display: block;
 }
-.about .dropdownAboutContainer .dropdownAbout:last-child {
+.dropdownAboutContainer .dropdownAbout:last-child {
   margin-bottom: 0;
 }
 

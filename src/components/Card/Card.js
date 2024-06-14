@@ -26,15 +26,15 @@ const Card = () => {
 
     return (
         <div className="cardsContainer">
-                {logementsDatas.map(logement => (
-                    <Link key={logement.id} className="cardLogement" to={`/logements/${logement.id}`}>
-                        {logement.cover.length > 0 && (
-                            <img src={logement.cover} alt={logement.title} key={logement.id} />
-                        )}
-                        <p className="titreLogement">{logement.title}</p>
-                    </Link>
-                ))}
-            </div>
+            {logementsDatas.map(logement => (
+                <Link key={logement.id} className="cardLogement" to={`/logements/${logement.id}`}>
+                    {logement.cover.length > 0 && (
+                        <img src={logement.cover} alt={logement.title} key={logement.id} />
+                    )}
+                    <p className="titreLogement">{logement.title}</p>
+                </Link>
+            ))}
+        </div>
     );
 };
 

@@ -39,37 +39,4 @@ const Carrousel = ({ images }) => {
     );
 };
 
-/* 
-{images && images.map(image => (
-                    <img src={image} alt={image} key={image} className='imageAppart' />
-                )
-            )}
-
-
-
-
-<img src={previousIcon} className={classStringPrevious} onClick={previous} alt="précédente" />
-<img src={nextIcon} className={classStringNext} onClick={next} alt="suivante" />
-
-<img src={images[id]} className="picture" alt={titre} />
-
-<section className="carrousel" id="carrousel" aria-label="carrousel">
-            <div className="containerCarrousel"></div>
-            <button className="chevron chevronG" aria-label="précédent">&lt;</button>
-            <button className="chevron chevronD" aria-label="suivant">&gt;</button>
-        </section>
-
-
-
-
-console.log(image);
-
-/*return (
-                    <Link key={image} className="cardLogement" to={`/logements/${logement.id}`}>
-                    {logement.pictures.length > 0 && (
-                        <img src={logement.pictures[0]} alt={logement.title} key={logement.id} />
-                    )}
-                </Link>
-                )*/
-
 export default Carrousel;

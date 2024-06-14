@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Carrousel from '../../components/Carrousel/Carrousel';
 import { useParams } from 'react-router-dom';
 import InfoLogement from '../../components/InfoLogement/InfoLogement';
-import TagList from '../../components/tags/Tags';
+import Error from '../Error/Error'
+
     //const [imagesArray, setImagesArray] = useState([]);
 
-const Logements = ({tags}) => {
+const Logements = () => {
     const [logement, setLogement] = useState([]);
+    const [error, setError] = useState(false);
     let { id } = useParams();
     console.log(id);
 
@@ -28,12 +30,23 @@ const Logements = ({tags}) => {
                     setHost(logement.host);
                 } else {
                     console.error("Logement non trouvé");
+                    setError(true);
                 }
             })
             .catch(error => {
                 console.error("Erreur:", error);
             });
     }, [id]);
+
+
+    if (error) {
+        return <Error />;
+    }
+
+    if (!logement || !host) {
+        return <div>Chargement...</div>; // Ou un spinner de chargement
+    }
+
 
     return (
         <div className='ficheLogement'>
@@ -45,9 +58,10 @@ const Logements = ({tags}) => {
                 nom={host.name} 
                 picture={host.picture} 
                 rating={logement.rating} 
+                tags={logement.tags}
+                description={logement.description}
+                equipments={logement.equipments}
             /> 
-            <TagList tags={tags} />
-
         </div>
     );
 };

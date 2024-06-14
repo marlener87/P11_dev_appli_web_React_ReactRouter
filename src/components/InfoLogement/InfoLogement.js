@@ -1,7 +1,13 @@
 import React from 'react';
+import Dropdown from '../dropdown/Dropdown';
+//import Error from '../../pages/Error/Error'
 
-const InfoLogement = ({ nom, picture, title, location, rating }) => {
-    //console.log(logement);
+
+const InfoLogement = ({ nom, picture, title, location, rating, tags, description, equipments }) => {
+    console.log(equipments);
+
+    
+
     // Composant pour afficher une seule étoile
     // Fonction pour générer les étoiles
     const generateStars = (totalStars, highlightedStars) => {
@@ -17,8 +23,17 @@ const InfoLogement = ({ nom, picture, title, location, rating }) => {
         }
         return stars;
     };
+
+    // TAGS
+    // vérifie si la variable tags est falsy (null, undefined, false, vide...) ou si tags n'est pas un tableau. vérifie si la variable tags existe et est un tableau
+    if (!tags || !Array.isArray(tags)) {
+        return null;
+    }
+    console.log('TagList props:', tags); // Add this line for debugging
+
     
     return (
+        <>
         <section className='descriptionLogement'>
             <div className='left'>
                 <div className="locationBlock">
@@ -26,7 +41,11 @@ const InfoLogement = ({ nom, picture, title, location, rating }) => {
                     <p>{location}</p>
                 </div>
                 <div className="tagsBlock">
-                
+                    <ul>
+                        {tags.map((tag, index) => (
+                            <li key={index}>{tag}</li>
+                        ))}
+                    </ul>
                 </div>
             </div>                
 
@@ -41,6 +60,19 @@ const InfoLogement = ({ nom, picture, title, location, rating }) => {
             </div>
         </section>  
 
+        <section>
+            <div className="dropdownAboutContainer">
+                <Dropdown title="Description" description={description} index="1"/>
+                <Dropdown title="Equipements" content={
+                    <ul>
+                        {equipments && equipments.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                } index="2"/> 
+            </div>
+        </section>
+        </>
     );
 };
 
