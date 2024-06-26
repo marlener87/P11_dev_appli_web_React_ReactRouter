@@ -1,9 +1,36 @@
 .about {
-    margin: 0 100px;
-    position: relative; 
-
     .bannerAbout {
-        height: 200px;
-        border-radius: 20px;
+        .bgDark {
+            background: none;
+        }
+    }
+
+    .collapseAbout {
+        margin: 40px 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 400px) {
+            margin: 20px;
+        }
+
+        .dropdownAbout{
+            width: 85%;
+
+            @media screen and (max-width: 400px) {
+                width: 100%;
+            }
+
+            .dorpdownTitle {
+
+                .dropdownButton {
+                    @media screen and (max-width: 400px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
     }
 }

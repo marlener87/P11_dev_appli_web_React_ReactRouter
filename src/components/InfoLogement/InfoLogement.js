@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../dropdown/Dropdown';
+import Dropdown from '../collapse/Collapse';
 //import Error from '../../pages/Error/Error'
 
 

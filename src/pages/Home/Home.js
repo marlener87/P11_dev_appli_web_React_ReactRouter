@@ -5,7 +5,9 @@ import imageHeader from '../../assets/img/accueil.jpg'; // Importation de l'imag
 const Home = () => {
     return (
         <main>
-            <Header imageHeader={imageHeader} titreHeader='Chez vous, partout et ailleurs'/>
+            <div className="headerHome">
+                <Header imageHeader={imageHeader} titreHeader='Chez vous, partout et ailleurs'/>
+            </div>
             <Card />
         </main>
     );

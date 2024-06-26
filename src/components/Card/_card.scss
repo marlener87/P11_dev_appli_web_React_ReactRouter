@@ -1,11 +1,18 @@
 .cardsContainer {
+    
     padding: 40px 40px 10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background: #f6f6f6;
     border-radius: 20px;
-    margin: 40px 0;
+    margin: 40px 100px;
+
+    @media screen and (max-width: 400px) {
+        padding: 0 20px;
+        background: none;
+        margin: 22px 0;
+    }
 
     .cardLogement {
         width: 390px;
@@ -13,12 +20,22 @@
         margin-bottom: 30px;
         position: relative;
 
+        @media screen and (max-width: 400px) {
+            //width: 335px;
+            height: 255px;
+        }
+
         img {
             height: 390px;
             width: 390px;
             background-position: center;
             background-size: cover;
             border-radius: 5px;
+
+            @media screen and (max-width: 400px) {
+                width: 350px;
+                height: 255px;
+            }
         }
 
         .titreLogement {
@@ -28,6 +45,11 @@
             width: 180px;
             color: white;
             font-weight: 900;
+
+            @media screen and (max-width: 400px) {
+                top: 204px;
+                width: 300px;
+            }
         }
     }
 }

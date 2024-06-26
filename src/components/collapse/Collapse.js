@@ -16,7 +16,6 @@ const Dropdown = ({ title, description, index, content }) => {
             <div className={`dropdownContent ${openDropdown === index ? 'menu-open' : ''}`}>
                 {description && <p>{description}</p>}
                 {content && content}
-                
             </div>
         </div>
     );
