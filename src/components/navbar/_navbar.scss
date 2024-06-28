@@ -7,6 +7,7 @@ header {
 
     @media screen and (max-width: 400px) {
         margin: 0 20px;
+        padding: 20px 0;
     }
 
     .logo {
@@ -40,5 +41,9 @@ header {
                 text-decoration: underline;
             }
         }
+
+        .navbarLink.active {
+            text-decoration: underline;  
+       }
     }
 }

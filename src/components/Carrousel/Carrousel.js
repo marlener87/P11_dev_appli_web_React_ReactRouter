@@ -28,7 +28,7 @@ const Carrousel = ({ images }) => {
         <section className="carrousel-container">
             <button className={classStringPrevious} onClick={previous} aria-label="précédente">&#60;</button>
 			
-            <img src={images[id]} alt={`photo ${id + 1}`} className='imageAppart' />
+            <img src={images[id]} alt={`${id + 1}`} className='imageAppart' />
 
 			<p className='numPages'>
 				{id + 1}/{images.length}
