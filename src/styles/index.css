@@ -11,6 +11,40 @@
   font-family: "montserrat", sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 a {
   text-decoration: none;
 }
@@ -23,6 +57,11 @@ header {
           align-items: center;
   padding: 30px 0;
   margin: 0 100px;
+}
+@media screen and (max-width: 768px) {
+  header {
+    margin: 0 50px;
+  }
 }
 @media screen and (max-width: 400px) {
   header {
@@ -81,6 +120,12 @@ header nav .navbarLink.active {
   border-radius: 20px;
   margin: 40px 100px;
 }
+@media screen and (max-width: 768px) {
+  .cardsContainer {
+    margin: 40px 50px;
+    padding: 20px 20px 10px;
+  }
+}
 @media screen and (max-width: 400px) {
   .cardsContainer {
     padding: 0 20px;
@@ -94,6 +139,12 @@ header nav .navbarLink.active {
   margin-bottom: 30px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .cardsContainer .cardLogement {
+    width: 300px;
+    height: 300px;
+  }
+}
 @media screen and (max-width: 400px) {
   .cardsContainer .cardLogement {
     height: 255px;
@@ -105,6 +156,12 @@ header nav .navbarLink.active {
   background-position: center;
   background-size: cover;
   border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+  .cardsContainer .cardLogement img {
+    width: 300px;
+    height: 300px;
+  }
 }
 @media screen and (max-width: 400px) {
   .cardsContainer .cardLogement img {
@@ -119,6 +176,11 @@ header nav .navbarLink.active {
   width: 180px;
   color: white;
   font-weight: 900;
+}
+@media screen and (max-width: 768px) {
+  .cardsContainer .cardLogement .titreLogement {
+    top: 230px;
+  }
 }
 @media screen and (max-width: 400px) {
   .cardsContainer .cardLogement .titreLogement {
@@ -154,6 +216,11 @@ footer p {
   margin: 0 100px;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .carrousel-container {
+    margin: 0 50px;
+  }
+}
 @media screen and (max-width: 400px) {
   .carrousel-container {
     margin: 0 20px;
@@ -175,7 +242,6 @@ footer p {
   height: 50px;
   width: 50px;
   font-size: 100px;
-  font-weight: bold;
   color: white;
   border: none;
   background: none;
@@ -193,7 +259,6 @@ footer p {
 }
 @media screen and (max-width: 400px) {
   .carrousel-container .previous, .carrousel-container .next {
-    font-weight: lighter;
     height: 24px;
     width: 24px;
     font-size: 40px;
@@ -246,6 +311,11 @@ footer p {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 768px) {
+  .banner {
+    margin: 0 50px;
+  }
+}
 @media screen and (max-width: 400px) {
   .banner {
     padding-left: 16px;
@@ -257,6 +327,12 @@ footer p {
   color: white;
   font-size: 48px;
   z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .banner h1 {
+    text-align: center;
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 400px) {
   .banner h1 {
@@ -297,7 +373,12 @@ footer p {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
+  .about .collapseAbout {
+    margin: 40px 50px;
+  }
+}
+@media screen and (max-width: 576px) {
   .about .collapseAbout {
     margin: 20px;
   }
@@ -305,12 +386,12 @@ footer p {
 .about .collapseAbout .dropdownAbout {
   width: 85%;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .about .collapseAbout .dropdownAbout {
     width: 100%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   .about .collapseAbout .dropdownAbout .dorpdownTitle .dropdownButton {
     font-size: 13px;
   }
@@ -325,6 +406,21 @@ footer p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 100px;
+}
+@media screen and (max-width: 876px) {
+  .descriptionLogement {
+    margin: 0 100px;
+    padding-top: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .descriptionLogement {
+    margin: 0 50px;
+  }
 }
 @media screen and (max-width: 400px) {
   .descriptionLogement {
@@ -380,6 +476,21 @@ footer p {
     max-width: 80px;
   }
 }
+@media screen and (max-width: 876px) {
+  .descriptionLogement .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 20px;
+  }
+}
 @media screen and (max-width: 400px) {
   .descriptionLogement .right {
     display: -webkit-box;
@@ -427,6 +538,11 @@ footer p {
 .descriptionLogement .right .rating {
   font-size: 24px;
 }
+@media screen and (max-width: 1206px) {
+  .descriptionLogement .right .rating {
+    font-size: 18px;
+  }
+}
 @media screen and (max-width: 400px) {
   .descriptionLogement .right .rating {
     font-size: 15px;
@@ -448,12 +564,14 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .dropdownAboutContainer {
+    margin: 40px 50px;
+  }
 }
 @media screen and (max-width: 400px) {
   .dropdownAboutContainer {
@@ -473,9 +591,6 @@ footer p {
     width: 100%;
     margin-bottom: 20px;
   }
-}
-.dropdownAboutContainer .dropdownAbout:last-child {
-  margin-bottom: 20px;
 }
 
 .dropdownAbout {

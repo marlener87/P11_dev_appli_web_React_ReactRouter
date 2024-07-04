@@ -3,6 +3,10 @@
     margin: 0 100px;
     position: relative;
 
+    @media screen and (max-width: 768px) { // tablette
+        margin: 0 50px;
+    }
+
     @media screen and (max-width: 400px) {
         margin: 0 20px;
         height: 255px;
@@ -23,7 +27,6 @@
         height: 50px;
         width: 50px;
         font-size: 100px;
-        font-weight: bold;
         color: white;
         border: none;
         background: none;
@@ -34,7 +37,6 @@
         cursor: pointer;
 
         @media screen and (max-width: 400px) {
-            font-weight: lighter;
             height: 24px;
             width: 24px;
             font-size: 40px;

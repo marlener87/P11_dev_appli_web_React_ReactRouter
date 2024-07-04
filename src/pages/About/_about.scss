@@ -12,6 +12,10 @@
         align-items: center;
         justify-content: center;
 
+        @media screen and (max-width: 768px) { // tablette
+            margin: 40px 50px;
+        }
+
         @media screen and (max-width: 400px) {
             margin: 20px;
         }

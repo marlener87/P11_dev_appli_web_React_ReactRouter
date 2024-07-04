@@ -49,8 +49,8 @@ const Logements = () => {
 
 
     return (
-        <div className='ficheLogement'>
-
+        <main>
+            <div className='ficheLogement'>
             <Carrousel images={logement.pictures} />
             <InfoLogement 
                 title={logement.title} 
@@ -63,6 +63,8 @@ const Logements = () => {
                 equipments={logement.equipments}
             /> 
         </div>
+        </main>
+        
     );
 };
 
