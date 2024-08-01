@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 
-const Dropdown = ({ title, description, index, content }) => {
-    const [openDropdown, setOpenDropdown] = useState(null);
+/**
+ * composant affichant un bouton qui, lorsqu'il est cliqué, bascule l'affichage du contenu déroulant associé
+ */
+const Dropdown = ({ title, description, content }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleDropdown = (index) => {
-        setOpenDropdown(openDropdown === index ? null : index);
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
     };
 
     return (
-        <div className="dropdownAbout" key={index}>
-            <button className="dropdownTitle" onClick={() => toggleDropdown(index)}>
+        <div className="dropdownAbout">
+            <button className="dropdownTitle" onClick={toggleDropdown}>
                 <span className='dropdownButton'>{title}</span>
-                <i className={`fa-solid fa-chevron-down ${openDropdown === index ? 'fa-chevron-down-rotate' : ''}`}></i>
+                <i className={`fa-solid fa-chevron-down ${isOpen ? 'fa-chevron-down-rotate' : ''}`}></i>
             </button>
-            <div className={`dropdownContent ${openDropdown === index ? 'menu-open' : ''}`}>
+            <div className={`dropdownContent ${isOpen ? 'menu-open' : ''}`}>
                 {description && <p>{description}</p>}
                 {content && content}
             </div>

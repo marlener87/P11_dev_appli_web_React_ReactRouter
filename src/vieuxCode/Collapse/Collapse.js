@@ -38,3 +38,56 @@ const Collaspe = () => {
 };
 
 export default Collaspe;
+
+
+
+
+
+
+
+
+
+// WILLIAM
+// const Dropdown = ({}) => {
+//   const [isOpen, setIsOpen] = useState(false);
+// const toggleDrpdown = () => {
+//   setIsOpen(prev =>!prev)
+//   ou
+//   setIsOpen(!isOpen)
+
+// }
+
+
+// return (
+//   <div>
+//     <button onClick={toggleDrpdown}> clique</button>
+//     {isOpen && <div> contenu caché</div>}
+//     ou 
+//     {isOpen ? <div>contenu caché</div> : ''}
+//   </div>
+// )
+// }
+
+
+
+
+// const Dropdown = ({ title, description, index, content }) => {
+//     const [openDropdown, setOpenDropdown] = useState(null);
+
+//     const toggleDropdown = (index) => {
+//         setOpenDropdown(openDropdown === index ? null : index);
+//     };
+
+//     return (
+//         <div className="dropdownAbout" key={index}>
+//             <button className="dropdownTitle" onClick={() => toggleDropdown(index)}>
+//                 <span className='dropdownButton'>{title}</span>
+//                 <i className={`fa-solid fa-chevron-down ${openDropdown === index ? 'fa-chevron-down-rotate' : ''}`}></i>
+//             </button>
+//             <div className={`dropdownContent ${openDropdown === index ? 'menu-open' : ''}`}>
+//                 {description && <p>{description}</p>}
+//                 {content && content}
+//             </div>
+//         </div>
+//     );
+// };
