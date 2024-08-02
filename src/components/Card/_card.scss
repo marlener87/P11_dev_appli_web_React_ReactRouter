@@ -1,5 +1,4 @@
 .cardsContainer {
-    
     padding: 40px 40px 10px;
     display: flex;
     justify-content: space-between;
@@ -31,43 +30,39 @@
         }
 
         @media screen and (max-width: 400px) {
-            //width: 335px;
             height: 255px;
         }
 
-        img {
-            height: 390px;
-            width: 390px;
-            background-position: center;
-            background-size: cover;
-            border-radius: 5px;
+        figure {
+            display: block;
+            margin: 10px;
+            padding: 0;
+            max-width: 390px;
+            min-width: 335px;
+            position: relative;
 
-            @media screen and (max-width: 768px) { // tablette
-                width: 300px;
-                height: 300px;
+            img {
+                width: 100%;
+                height: 340px;
+                object-fit: cover;
+                border-radius: 10px;
             }
 
-            @media screen and (max-width: 400px) {
-                width: 350px;
-                height: 255px;
-            }
-        }
-
-        .titreLogement {
-            position: absolute;
-            top: 320px;
-            left: 10px;
-            width: 180px;
-            color: white;
-            font-weight: 900;
-
-            @media screen and (max-width: 768px) { // tablette
-                top: 230px;
-            }
-
-            @media screen and (max-width: 400px) {
-                top: 204px;
-                width: 300px;
+            figcaption {
+                position: absolute;
+                bottom: 1%;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                font-size: 18px;
+                font-weight: 500;
+                color: white;
+                display: flex;
+                align-items: center;
+                padding: 0 15px 10px 15px;
+                margin: 0;
+                border-radius: 10px;
+                background: linear-gradient(0deg, rgba(1, 0, 10, 0.3) 0%, rgba(1, 0, 10, 0.3) 55%, rgba(1, 0, 10, 0) 100%);
             }
         }
     }

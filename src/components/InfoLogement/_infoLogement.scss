@@ -140,7 +140,6 @@
     margin: 40px 100px;
     display: flex;
     flex-direction: row;
-    //align-items: center;
     justify-content: space-between;
 
     @media screen and (max-width: 768px) { // tablette
@@ -161,12 +160,4 @@
             margin-bottom: 20px;
         }
     }
-
-    // .dropdownAbout:last-child {
-    //     //margin-bottom: 20px;
-
-    //     @media screen and (max-width: 876px) {
-    //         margin-bottom: 0;
-    //     }
-    // }
 }

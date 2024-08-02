@@ -1,18 +1,14 @@
 import React from 'react';
 import Dropdown from '../collapse/Collapse';
-//import Error from '../../pages/Error/Error'
-
 
 const InfoLogement = ({ nom, picture, title, location, rating, tags, description, equipments }) => {
-    console.log(equipments);
-
-    
+    //console.log(equipments);
 
     // Composant pour afficher une seule étoile
     // Fonction pour générer les étoiles
     const generateStars = (totalStars, highlightedStars) => {
-        console.log(totalStars);
-        console.log(highlightedStars);
+        //console.log(totalStars);
+        //console.log(highlightedStars);
         const stars = [];
         for (let i = 0; i < totalStars; i++) {
             if (i < highlightedStars) {
@@ -29,7 +25,7 @@ const InfoLogement = ({ nom, picture, title, location, rating, tags, description
     if (!tags || !Array.isArray(tags)) {
         return null;
     }
-    console.log('TagList props:', tags); // Add this line for debugging
+    //console.log('TagList props:', tags); // Add this line for debugging
 
     
     return (

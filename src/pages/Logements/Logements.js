@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import Carrousel from '../../components/Carrousel/Carrousel';
-import { useParams } from 'react-router-dom';
-import InfoLogement from '../../components/InfoLogement/InfoLogement';
+import React, { useEffect, useState } from 'react'; // Importation de React et des hooks useEffect et useState
+import { useParams } from 'react-router-dom'; // Importation du hook useParams de react-router-dom pour récupérer les paramètres de l'URL
+import Carrousel from '../../components/Carrousel/Carrousel'; // Importation du composant Carrousel
+import InfoLogement from '../../components/InfoLogement/InfoLogement'; // Importation du composant InfoLogement
 import Error from '../Error/Error'
 
-    //const [imagesArray, setImagesArray] = useState([]);
-
+//console.log(id);
 const Logements = () => {
-    const [logement, setLogement] = useState([]);
-    const [error, setError] = useState(false);
-    let { id } = useParams();
-    console.log(id);
-
+    const [logement, setLogement] = useState([]); 
+    const [error, setError] = useState(false); 
+    let { id } = useParams(); 
+    
     const [host, setHost] = useState([]);
 
     useEffect(() => {
